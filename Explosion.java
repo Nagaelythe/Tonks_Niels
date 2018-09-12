@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+
 import java.util.*;
 
 /**
@@ -25,14 +26,18 @@ public class Explosion extends Actor
     
     /** How much do we increment the index in the explosion animation. */
     private int increment=1;
-    
+    private int Rad = 20;
+    private int loc;
     /**
      * Create an explosion.
      */
-    public Explosion() {
+    public Explosion(int x) {
+        
         initialiseImages();
         setImage(images[0]);        
         Greenfoot.playSound("Explosion.wav");
+        loc =x;
+  
     }    
     
     /** 
@@ -54,13 +59,60 @@ public class Explosion extends Actor
         }
     }
     
+    public void Destroy(){
+        int x = loc;
+        int y = TonkWorld.WORLD(x);
+        if(x == TonkWorld.LENGTH || x+Rad >= TonkWorld.LENGTH){    
+            for(int i = TonkWorld.LENGTH-1; i>=x-Rad ; i --){
+                TonkWorld.world[i]+= Rad-Math.abs(i-x);
+            }
+            for(int i = 1; i<= Rad; i ++){
+               List<Tonk> tonks = getObjectsInRange(i, Tonk.class);
+               if(tonks.size() > 0) {
+               for (Tonk t : tonks){
+                    t.hpLoss(1);   
+                } 
+
+            } 
+            }
+            
+
+        }
+        else if(x == 0 || x-Rad <=0){    
+            for(int i = 0; i<=Rad+x ; i ++){
+                TonkWorld.world[i]+=Rad-Math.abs(i-x);             
+            }
+            for(int i = 1; i<= Rad; i ++){
+               List<Tonk> tonks = getObjectsInRange(i, Tonk.class);
+               if(tonks.size() > 0) {
+               for (Tonk t : tonks){
+                    t.hpLoss(1);   
+                }  
+            }
+            }
+        }
+        else{   
+            for(int i = x-Rad; i<=Rad+x ; i ++){
+                TonkWorld.world[i]+=Math.floor((Math.abs(x-i) - Rad )* (TonkWorld.HEIGTH/TonkWorld.LENGTH));               
+            }
+        }
+            for(int i = 1; i<= Rad; i ++){
+               List<Tonk> tonks = getObjectsInRange(i, Tonk.class);
+               if(tonks.size() > 0) {
+               for (Tonk t : tonks){
+                    t.hpLoss(1);   
+                } 
+            }
+        }
+    }
+    
     /**
      * EXPLODE!
      */
     public void act()
     { 
         setImage(images[imageNo]);
-
+        Destroy();
         imageNo += increment;
         if (imageNo >= IMAGE_COUNT) {
             increment = -increment;
@@ -71,5 +123,7 @@ public class Explosion extends Actor
             getWorld().removeObject(this);
         }
     }
-   
+    
+    
+
 }
