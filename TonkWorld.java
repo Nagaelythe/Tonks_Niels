@@ -68,11 +68,8 @@ public class TonkWorld extends World
                     }
                     
             }
-            
-            
+   
         }
-        
-        
     }
     
     public void drawWorld(int[] mesh){
