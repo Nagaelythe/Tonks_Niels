@@ -16,8 +16,7 @@ public class Barrel extends Actor
  
     public void act() {
         setRotation(tonk.aimDegree);
-        setLocation(tonk.getX(),tonk.getY()-tonk.tonkHeight);
+        setLocation(tonk.getX(),tonk.getY());
     }
-    
 }
 
