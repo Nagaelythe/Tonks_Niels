@@ -8,38 +8,40 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Tonk extends Actor
 {
-    int aimDegree, fuel,player,Power;
+    int aimDegree, hp, fuel,player,Power;
     String name;
     boolean noBarrel = true;
-    public static int hp;
+    int tonkHeight = 5;
+    int barrelLength = 32;
+    int worldAlign = 6;
     
     // class constructor int p,String nam
     public Tonk(){
         aimDegree = -45;
         hp = 100;
-        Power =20;
+        Power = 20;
 
     }
     public void act() 
     {   
         if(noBarrel){
             Barrel B = new Barrel(this);
-            getWorld().addObject(B,getX(),getY());
+            getWorld().addObject(B,getX(),getY()-tonkHeight);
             noBarrel = false;
+
         }
         input();
         if(dedded()){
-            getWorld().addObject(new Explosion(getX()), getX(), getY());
+            getWorld().addObject(new Explosion(), getX(), getY());
             getWorld().removeObject(this);
         }  
     }  
     
     public void input(){
         if(Greenfoot.isKeyDown("left")) {
-            setLocation( getX()-1, TonkWorld.world[(getX()-1)]);
-            fuel--;
+            setLocation( getX()-1, TonkWorld.WORLD(getX()-1)-worldAlign);
         } if(Greenfoot.isKeyDown("right")) {
-            setLocation( getX()+1, TonkWorld.world[(getX()+1)]);
+            setLocation( getX()+1, TonkWorld.WORLD(getX()+1)-worldAlign);
         } if(Greenfoot.isKeyDown("down")){
             aimDegree--;
         } if(Greenfoot.isKeyDown("up")){
@@ -47,16 +49,16 @@ public class Tonk extends Actor
         } if(Greenfoot.isKeyDown("space")){
             fire();
         }
+
     }
     
     private void fire(){
-        Projectile p = new Projectile(new Vector(aimDegree, Power));
-        getWorld().addObject(p, getX(), getY());
-       
-        
+        Projectile p = new Projectile(new Vector(aimDegree,Power));
+        Vector Bar = new Vector(aimDegree, barrelLength);
+        getWorld().addObject(p, getX() + (int) Bar.getX(), getY() - tonkHeight + (int) Bar.getY());    
         
     }
-    public static void hpLoss(int av){
+    public void hpLoss(int av){
         hp-=av;
     }
     private boolean dedded(){
