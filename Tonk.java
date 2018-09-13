@@ -16,7 +16,7 @@
             protected static int worldAlign = 6;
             int Player;
             boolean fired,Dedded;
-            int X;
+            int posX,posY;
             // class constructor int p,String nam
         public Tonk(int player){
         aimDegree = -45;
@@ -28,6 +28,7 @@
     }
     public void act() 
     {   
+        updPos();
         if(noBarrel){
             Barrel B = new Barrel(this);
             getWorld().addObject(B,getX(),getY()-tonkHeight);
@@ -64,11 +65,14 @@
             TonkWorld.turn = (TonkWorld.turn+1)%2;
             fuel = 100;
         }
-        X = getX();
+
         Dedded = isDedded();
 
     }
-    
+    private void updPos(){
+        posY = getY();
+        posX = getX();
+    }
     private void fire(){
         Projectile p = new Projectile(new Vector(aimDegree,Power));
         Vector Bar = new Vector(aimDegree, barrelLength);
