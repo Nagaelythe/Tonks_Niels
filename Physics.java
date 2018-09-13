@@ -23,4 +23,5 @@ public class Physics
     public static void Gravity(Vector in){
         in.add(new Vector(90, 1));
     }
+    
 }

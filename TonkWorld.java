@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.Random;
 /**
@@ -13,17 +14,26 @@ public class TonkWorld extends World
     public static final int HEIGTH = 560;
     private GreenfootImage background = getBackground();
     public static int[] world;
-    public TonkWorld()
+    public static int turn = 0;
+    public static int PLAYERS = 0;
+    public static Tonk Tonk1;
+    public static Tonk Tonk2;
+    public TonkWorld(int x)
     {    
         super(1200, 560, 1); 
         
         background.setColor(Color.LIGHT_GRAY);
         background.fill();
-        addObject(new Tonk(), 100, 560-50);
+
         int[] mesh = createMesh(LENGTH);
         createWorld(mesh);
         drawWorld(mesh);
         world = mesh;
+        Tonk1 = new Tonk(0);
+        Tonk2 = new Tonk(1);        
+        Tonk[] Tonks = {Tonk1,Tonk2};
+        addObject(Tonk1, 100, WORLD(100)-Tonk.worldAlign);
+        addObject(Tonk2, 800, WORLD(800)-Tonk.worldAlign);
     }
     public  void reDraw(){
         GreenfootImage bob = getBackground();
@@ -33,10 +43,10 @@ public class TonkWorld extends World
             bob.setColorAt(i, world[i], Color.BLACK); 
         }
     }
+    
     public static int WORLD(int x){
         return world[x];
     }
-
 
     private int[] createMesh(int size){
         int[] mesh = new int[size];
@@ -71,8 +81,6 @@ public class TonkWorld extends World
             
             
         }
-        
-        
     }
     
     public void drawWorld(int[] mesh){
