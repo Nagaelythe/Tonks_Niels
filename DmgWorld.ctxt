@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=DmgWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ DmgWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ DmgWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=tonk1\ tonk2\ mesh
 comment1.target=DmgWorld(Tonk,\ Tonk,\ int[])
 comment2.params=tonk1\ tonk2\ tonk3\ mesh

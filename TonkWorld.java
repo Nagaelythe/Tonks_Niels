@@ -23,7 +23,12 @@ public class TonkWorld extends World
     public TonkWorld(int x)
     {    
         super(1200, 560, 1); 
+<<<<<<< HEAD
         PLAYERS = x;
+=======
+        
+        
+>>>>>>> be48e7d8dbddc1f4dac25df0863657e957ba8d28
         int[] mesh = createMesh(LENGTH);
         createWorld(mesh);
         drawWorld(mesh);
