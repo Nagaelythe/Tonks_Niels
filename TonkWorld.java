@@ -32,6 +32,8 @@ public class TonkWorld extends World
         Tonk[] Tonks = {Tonk1,Tonk2};
         addObject(Tonk1, 100, WORLD(100)-Tonk.worldAlign);
         addObject(Tonk2, 800, WORLD(800)-Tonk.worldAlign);
+        
+
     }
 
     
