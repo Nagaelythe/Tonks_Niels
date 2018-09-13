@@ -11,4 +11,10 @@ comment4.params=mesh
 comment4.target=void\ createWorld(int[])
 comment5.params=mesh
 comment5.target=void\ drawWorld(int[])
+<<<<<<< HEAD
 numComments=6
+=======
+comment6.params=n
+comment6.target=void\ createTree(int)
+numComments=7
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de

@@ -1,4 +1,5 @@
 #Greenfoot project file
+<<<<<<< HEAD
 class.CounterMinus.image=slice1.png
 class.CounterPlus.image=slice2.png
 class.DmgWorld.image=sky.jpg
@@ -6,6 +7,15 @@ class.SelectNumberOfPlayers.image=slice3.png
 class.Start.image=slice8.png
 class.StartScreen.image=slice9.png
 class.TonkWorld.image=sky.jpg
+=======
+class.Barrel.image=barrel.png
+class.Explosion.image=explosion.png
+class.MyWorld.image=rivets.jpg
+class.Projectile.image=bullet.png
+class.Tonk.image=tonk.png
+class.TonkWorld.image=fingerprint.jpg
+class.Tree.image=tree2.png
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 dependency1.from=TonkWorld
 dependency1.to=Tonk
 dependency1.type=UsesDependency
@@ -90,6 +100,7 @@ dependency8.type=UsesDependency
 dependency9.from=Explosion
 dependency9.to=DmgWorld
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=737
 editor.fx.0.width=1058
 editor.fx.0.x=124
@@ -97,6 +108,15 @@ editor.fx.0.y=37
 height=813
 package.numDependencies=28
 package.numTargets=21
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+height=704
+package.numDependencies=24
+package.numTargets=16
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -133,40 +153,61 @@ target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
 target12.name=Physics
+=======
+target12.name=Tree
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
 target13.name=Projectile
+=======
+target13.name=Menu
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=80
 target13.x=0
 target13.y=0
 target14.height=50
+<<<<<<< HEAD
 target14.name=StartScreen
+=======
+target14.name=Vector
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target14.showInterface=false
 target14.type=ClassTarget
 target14.width=100
 target14.x=0
 target14.y=0
 target15.height=50
+<<<<<<< HEAD
 target15.name=Mover
+=======
+target15.name=MyWorld
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target15.showInterface=false
 target15.type=AbstractTarget
 target15.width=80
 target15.x=0
 target15.y=0
 target16.height=50
+<<<<<<< HEAD
 target16.name=Counter
+=======
+target16.name=Tonk
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=80
 target16.x=0
 target16.y=0
+<<<<<<< HEAD
 target17.height=50
 target17.name=Menu
 target17.showInterface=false
@@ -187,6 +228,8 @@ target19.type=PackageTarget
 target19.width=80
 target19.x=0
 target19.y=0
+=======
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target2.height=50
 target2.name=CounterMinus
 target2.showInterface=false
@@ -257,7 +300,14 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=1394
 world.lastInstantiated=StartScreen
 xPosition=23
 yPosition=29
+=======
+width=1294
+world.lastInstantiated=TonkWorld
+xPosition=-7
+yPosition=-7
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de

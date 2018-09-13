@@ -27,6 +27,7 @@ public class TonkWorld extends World
         createWorld(mesh);
         drawWorld(mesh);
         world = mesh;
+        createTree(15);
         Tonk1 = new Tonk(0);
         Tonk2 = new Tonk(1);        
         Tonk[] Tonks = {Tonk1,Tonk2};
@@ -49,13 +50,14 @@ public class TonkWorld extends World
         Random R = new Random();
         int sections = mesh.length/12;
         int terrain;
-        for(int i =0; i <LENGTH;i+=sections){
+        
+        for(int i = 0; i <LENGTH; i+=sections){
             terrain = R.nextInt(3);
             for(int j = 0; j < sections; j++){
                 if(i == 0 && j ==0) {mesh[i+j] = HEIGTH-150;}
                 else{
                    while( mesh[i+j-1] == 1 && terrain == 0 || mesh[(i+j)-1]+1 == HEIGTH-1 && terrain == 2 ) {terrain = R.nextInt(3);}
-                switch(terrain){
+                    switch(terrain){
                         case 0:
                             mesh[i+j] = mesh[(i+j)-1]-1;
                             break;
@@ -65,15 +67,10 @@ public class TonkWorld extends World
                         case 2:
                             mesh[i+j] = mesh[(i+j)-1]+1;
                             break;
-                        }
                     }
-                    
-            }
-            
-            
+                }    
+            }   
         }
-        
-        
     }
     
     public void drawWorld(int[] mesh){
@@ -84,9 +81,16 @@ public class TonkWorld extends World
         }
     }
     
+    public void createTree(int n){
+        Random r = new Random();
+       
+        for(int i = 0; i < n; i++){
+            int rx = r.nextInt(LENGTH);
+            addObject(new Tree(), rx, WORLD(rx)-20);
+        }
+    }
     
-
-}
+    }
 
 
 

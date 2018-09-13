@@ -13,30 +13,32 @@ public class Projectile extends Actor
     private double x = 0;
     private double y = 0;
     private int KAPOW =10;
+
     // Creator for the class. Takes the power the bullet flies with as a vector, and the direction in degrees as an int.
-    public Projectile(Vector vek ){
+    public Projectile(Vector v ){
         
-        course = vek;
-        setRotation(vek.direction);
-        
-        
-        
+        course = v;
+        setRotation(v.direction);
         
     }
     public void act() 
     {
+        
         x = getX()+course.getX();
         y = getY()+course.getY();
+        if( x < 0 || x > TonkWorld.LENGTH){
+            getWorld().removeObject(this);
+        } else{
         setLocation( (int) x, (int) y);
         Physics.Gravity(course);
         if(hitsGround()){
             getWorld().addObject(new Explosion(getX()), getX(), TonkWorld.WORLD(getX()));
-//            getWorld().removeObject(B);
             getWorld().removeObject(this);
+        }
         }
     } 
     
     private boolean hitsGround(){
-        return y>=TonkWorld.WORLD(getX());
+        return y >= TonkWorld.WORLD(getX());
     }
 }
