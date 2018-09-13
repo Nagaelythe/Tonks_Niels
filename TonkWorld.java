@@ -18,20 +18,49 @@ public class TonkWorld extends World
     public static int PLAYERS = 0;
     public static Tonk Tonk1;
     public static Tonk Tonk2;
+    public static Tonk Tonk3;
+    public static Tonk Tonk4;
     public TonkWorld(int x)
     {    
         super(1200, 560, 1); 
-
+        PLAYERS = x;
         int[] mesh = createMesh(LENGTH);
         createWorld(mesh);
         drawWorld(mesh);
         world = mesh;
         createTree(15);
         Tonk1 = new Tonk(0);
-        Tonk2 = new Tonk(1);        
-        Tonk[] Tonks = {Tonk1,Tonk2};
-        addObject(Tonk1, 100, WORLD(100)-Tonk.worldAlign);
-        addObject(Tonk2, 800, WORLD(800)-Tonk.worldAlign);
+        Tonk2 = new Tonk(1);  
+        Tonk3 = new Tonk(2);
+        Tonk4 = new Tonk(3);
+        Random r = new Random();
+        int pos;
+        switch(PLAYERS){
+            case 1:
+                pos = r.nextInt(LENGTH);
+                addObject(Tonk1, pos, WORLD(pos)-Tonk.worldAlign);
+                pos = r.nextInt(LENGTH);
+                addObject(Tonk2, pos, WORLD(pos)-Tonk.worldAlign);
+                break;
+            case 2:
+                pos = r.nextInt(LENGTH);
+                addObject(Tonk1, pos, WORLD(pos)-Tonk.worldAlign);
+                pos = r.nextInt(LENGTH);
+                addObject(Tonk2, pos, WORLD(pos)-Tonk.worldAlign);
+                pos = r.nextInt(LENGTH);
+                addObject(Tonk3, pos, WORLD(pos)-Tonk.worldAlign);
+                break;
+            case 3:
+                pos = r.nextInt(LENGTH);
+                addObject(Tonk1, pos, WORLD(pos)-Tonk.worldAlign);
+                pos = r.nextInt(LENGTH);
+                addObject(Tonk2, pos, WORLD(pos)-Tonk.worldAlign);
+                pos = r.nextInt(LENGTH);
+                addObject(Tonk3, pos, WORLD(pos)-Tonk.worldAlign);
+                pos = r.nextInt(LENGTH);
+                addObject(Tonk4, pos, WORLD(pos)-Tonk.worldAlign);
+                break;
+            }
     }
 
     

@@ -17,10 +17,13 @@
             int Player;
             boolean fired,Dedded;
             int posX,posY;
+            private Vector course = new Vector(0,0);
+            private GreenfootImage greenTonk = new GreenfootImage("greenTonk.png");
+            private GreenfootImage tonk = new GreenfootImage("tonk.png");
             // class constructor int p,String nam
         public Tonk(int player){
         aimDegree = -45;
-        hp = 1;
+        hp = 100;
         Power = 20;
         Player = player;
         fuel = 100;
@@ -29,6 +32,10 @@
     public void act() 
     {   
         updPos();
+        if(isFloaty()){
+            tonkFalls();
+        }
+        
         if(noBarrel){
             Barrel B = new Barrel(this);
             getWorld().addObject(B,getX(),getY()-tonkHeight);
@@ -37,14 +44,14 @@
         }
         
         if(TonkWorld.turn == Player){
-
-        input();
+            setImage(greenTonk);
+            input();
   
         }
         if(Dedded){
             getWorld().addObject(new Explosion(getX()), getX(), getY());
         }
-            
+        course =new Vector(0,0);    
  }
     
     public void input(){
@@ -62,8 +69,9 @@
         } 
           if(Greenfoot.getKey()=="space"){
             fire();
-            TonkWorld.turn = (TonkWorld.turn+1)%2;
+            TonkWorld.turn = (TonkWorld.turn+1)%(TonkWorld.PLAYERS+1);
             fuel = 100;
+            setImage(tonk);
         }
 
         Dedded = isDedded();
@@ -85,5 +93,15 @@
     private boolean isDedded(){
         return hp <= 0;
     }
-
+    private boolean isFloaty(){
+        return posY != TonkWorld.WORLD(posX)-worldAlign;
+    }
+    private void tonkFalls(){
+        Physics.Gravity(course);
+        if( posX < 0 || posX > TonkWorld.LENGTH){
+            getWorld().removeObject(this);
+        } else{
+        setLocation( (int) (posX+course.getX()), (int) (posY+course.getY()));        
+    }
+}
 }
