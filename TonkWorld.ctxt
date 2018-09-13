@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TonkWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ TonkWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ TonkWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=x
 comment1.target=TonkWorld(int)
 comment2.params=x
@@ -11,6 +11,10 @@ comment4.params=mesh
 comment4.target=void\ createWorld(int[])
 comment5.params=mesh
 comment5.target=void\ drawWorld(int[])
+<<<<<<< HEAD
+numComments=6
+=======
 comment6.params=n
 comment6.target=void\ createTree(int)
 numComments=7
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de

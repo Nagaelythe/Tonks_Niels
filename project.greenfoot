@@ -1,17 +1,50 @@
 #Greenfoot project file
+<<<<<<< HEAD
+class.CounterMinus.image=slice1.png
+class.CounterPlus.image=slice2.png
+class.DmgWorld.image=sky.jpg
+class.SelectNumberOfPlayers.image=slice3.png
+class.Start.image=slice8.png
+class.StartScreen.image=slice9.png
+class.TonkWorld.image=sky.jpg
+=======
 class.Barrel.image=barrel.png
 class.Explosion.image=explosion.png
 class.MyWorld.image=rivets.jpg
 class.Projectile.image=bullet.png
 class.Tonk.image=tonk.png
 class.TonkWorld.image=fingerprint.jpg
+<<<<<<< HEAD
+=======
 class.Tree.image=tree2.png
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
+>>>>>>> be48e7d8dbddc1f4dac25df0863657e957ba8d28
 dependency1.from=TonkWorld
 dependency1.to=Tonk
 dependency1.type=UsesDependency
 dependency10.from=Explosion
+<<<<<<< HEAD
 dependency10.to=TonkWorld
 dependency10.type=UsesDependency
+=======
+<<<<<<< HEAD
+dependency10.to=DmgWorld
+dependency10.type=UsesDependency
+dependency11.from=Explosion
+dependency11.to=TonkWorld
+dependency11.type=UsesDependency
+dependency12.from=Barrel
+dependency12.to=Tonk
+dependency12.type=UsesDependency
+dependency13.from=Projectile
+dependency13.to=Vector
+dependency13.type=UsesDependency
+dependency14.from=Projectile
+dependency14.to=Explosion
+=======
+dependency10.to=TonkWorld
+dependency10.type=UsesDependency
+>>>>>>> e5ea0b8c1979eaee1ee52bc00cb4a5ec19c901db
 dependency11.from=Barrel
 dependency11.to=Tonk
 dependency11.type=UsesDependency
@@ -22,9 +55,11 @@ dependency13.from=Projectile
 dependency13.to=Explosion
 dependency13.type=UsesDependency
 dependency14.from=Projectile
-dependency14.to=TonkWorld
+dependency14.to=Physics
+>>>>>>> be48e7d8dbddc1f4dac25df0863657e957ba8d28
 dependency14.type=UsesDependency
 dependency15.from=Projectile
+<<<<<<< HEAD
 dependency15.to=Physics
 dependency15.type=UsesDependency
 dependency16.from=Mover
@@ -38,10 +73,40 @@ dependency18.to=MyWorld
 dependency18.type=UsesDependency
 dependency19.from=threePlayers
 dependency19.to=TonkWorld
+=======
+dependency15.to=TonkWorld
+dependency15.type=UsesDependency
+<<<<<<< HEAD
+dependency16.from=Projectile
+dependency16.to=Physics
+dependency16.type=UsesDependency
+dependency17.from=Mover
+dependency17.to=Vector
+dependency17.type=UsesDependency
+dependency18.from=twoPlayers
+dependency18.to=TonkWorld
+dependency18.type=UsesDependency
+dependency19.from=Start
+dependency19.to=MyWorld
+=======
+dependency16.from=Mover
+dependency16.to=Vector
+dependency16.type=UsesDependency
+dependency17.from=twoPlayers
+dependency17.to=TonkWorld
+dependency17.type=UsesDependency
+dependency18.from=CounterMinus
+dependency18.to=CounterPlus
+dependency18.type=UsesDependency
+dependency19.from=Start
+dependency19.to=TonkWorld
+>>>>>>> be48e7d8dbddc1f4dac25df0863657e957ba8d28
+>>>>>>> e5ea0b8c1979eaee1ee52bc00cb4a5ec19c901db
 dependency19.type=UsesDependency
 dependency2.from=TonkWorld
 dependency2.to=Tree
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency20.from=Tonk
 dependency20.to=Barrel
 dependency20.type=UsesDependency
@@ -74,6 +139,102 @@ dependency6.to=threePlayers
 dependency6.type=UsesDependency
 dependency7.from=MyWorld
 dependency7.to=ogog
+=======
+<<<<<<< HEAD
+dependency20.from=threePlayers
+dependency20.to=TonkWorld
+dependency20.type=UsesDependency
+dependency21.from=Tonk
+dependency21.to=Vector
+dependency21.type=UsesDependency
+dependency22.from=Tonk
+dependency22.to=Barrel
+dependency22.type=UsesDependency
+dependency23.from=Tonk
+dependency23.to=Explosion
+dependency23.type=UsesDependency
+dependency24.from=Tonk
+dependency24.to=Projectile
+dependency24.type=UsesDependency
+dependency25.from=Tonk
+dependency25.to=TonkWorld
+dependency25.type=UsesDependency
+dependency26.from=Tonk
+dependency26.to=Physics
+dependency26.type=UsesDependency
+dependency27.from=Physics
+dependency27.to=Vector
+dependency27.type=UsesDependency
+dependency3.from=DmgWorld
+dependency3.to=Tonk
+dependency3.type=UsesDependency
+dependency4.from=DmgWorld
+dependency4.to=TonkWorld
+dependency4.type=UsesDependency
+dependency5.from=MyWorld
+dependency5.to=Start
+dependency5.type=UsesDependency
+dependency6.from=MyWorld
+dependency6.to=twoPlayers
+dependency6.type=UsesDependency
+dependency7.from=MyWorld
+dependency7.to=threePlayers
+dependency7.type=UsesDependency
+dependency8.from=MyWorld
+dependency8.to=ogog
+dependency8.type=UsesDependency
+dependency9.from=Explosion
+dependency9.to=Tonk
+dependency9.type=UsesDependency
+editor.fx.0.height=1056
+editor.fx.0.width=1936
+editor.fx.0.x=-8
+editor.fx.0.y=-8
+height=1056
+package.numDependencies=27
+=======
+dependency20.from=Start
+dependency20.to=CounterPlus
+dependency20.type=UsesDependency
+dependency21.from=threePlayers
+dependency21.to=TonkWorld
+dependency21.type=UsesDependency
+dependency22.from=Counter
+dependency22.to=CounterPlus
+dependency22.type=UsesDependency
+dependency23.from=Tonk
+dependency23.to=Barrel
+dependency23.type=UsesDependency
+dependency24.from=Tonk
+dependency24.to=Explosion
+dependency24.type=UsesDependency
+dependency25.from=Tonk
+dependency25.to=Projectile
+dependency25.type=UsesDependency
+dependency26.from=Tonk
+dependency26.to=Vector
+dependency26.type=UsesDependency
+dependency27.from=Tonk
+dependency27.to=TonkWorld
+dependency27.type=UsesDependency
+dependency28.from=Physics
+dependency28.to=Vector
+dependency28.type=UsesDependency
+dependency3.from=StartScreen
+dependency3.to=SelectNumberOfPlayers
+dependency3.type=UsesDependency
+dependency4.from=StartScreen
+dependency4.to=Start
+dependency4.type=UsesDependency
+dependency5.from=StartScreen
+dependency5.to=Counter
+dependency5.type=UsesDependency
+dependency6.from=StartScreen
+dependency6.to=CounterPlus
+dependency6.type=UsesDependency
+dependency7.from=StartScreen
+dependency7.to=CounterMinus
+>>>>>>> e5ea0b8c1979eaee1ee52bc00cb4a5ec19c901db
 dependency7.type=UsesDependency
 dependency8.from=Explosion
 dependency8.to=Tonk
@@ -81,13 +242,33 @@ dependency8.type=UsesDependency
 dependency9.from=Explosion
 dependency9.to=DmgWorld
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=737
 editor.fx.0.width=1024
 editor.fx.0.x=22
 editor.fx.0.y=0
 height=704
 package.numDependencies=25
+=======
+<<<<<<< HEAD
+editor.fx.0.height=737
+editor.fx.0.width=1058
+editor.fx.0.x=124
+editor.fx.0.y=37
+height=813
+package.numDependencies=28
+package.numTargets=21
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+height=704
+package.numDependencies=24
+>>>>>>> be48e7d8dbddc1f4dac25df0863657e957ba8d28
+>>>>>>> e5ea0b8c1979eaee1ee52bc00cb4a5ec19c901db
 package.numTargets=16
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -110,70 +291,127 @@ target1.width=80
 target1.x=0
 target1.y=0
 target10.height=50
-target10.name=Projectile
+target10.name=threePlayers
 target10.showInterface=false
 target10.type=ClassTarget
-target10.width=80
+target10.width=90
 target10.x=0
 target10.y=0
 target11.height=50
-target11.name=Mover
+target11.name=DmgWorld
 target11.showInterface=false
-target11.type=AbstractTarget
+target11.type=ClassTarget
 target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
+target12.name=Physics
+=======
 target12.name=Tree
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
+target13.name=Projectile
+=======
 target13.name=Menu
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=80
 target13.x=0
 target13.y=0
 target14.height=50
+<<<<<<< HEAD
+target14.name=StartScreen
+=======
 target14.name=Vector
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target14.showInterface=false
 target14.type=ClassTarget
-target14.width=80
+target14.width=100
 target14.x=0
 target14.y=0
 target15.height=50
+<<<<<<< HEAD
+target15.name=Mover
+=======
 target15.name=MyWorld
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target15.showInterface=false
-target15.type=ClassTarget
+target15.type=AbstractTarget
 target15.width=80
 target15.x=0
 target15.y=0
 target16.height=50
+<<<<<<< HEAD
+target16.name=Counter
+=======
 target16.name=Tonk
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=80
 target16.x=0
 target16.y=0
+<<<<<<< HEAD
+target17.height=50
+target17.name=Menu
+target17.showInterface=false
+target17.type=ClassTarget
+target17.width=80
+target17.x=0
+target17.y=0
+target18.height=50
+target18.name=Vector
+target18.showInterface=false
+target18.type=ClassTarget
+target18.width=80
+target18.x=0
+target18.y=0
+target19.height=62
+target19.name=tonkstest
+target19.type=PackageTarget
+target19.width=80
+target19.x=0
+target19.y=0
+=======
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
 target2.height=50
-target2.name=Explosion
+target2.name=CounterMinus
 target2.showInterface=false
 target2.type=ClassTarget
-target2.width=80
+target2.width=110
 target2.x=0
 target2.y=0
+target20.height=50
+target20.name=MyWorld
+target20.showInterface=false
+target20.type=ClassTarget
+target20.width=80
+target20.x=0
+target20.y=0
+target21.height=50
+target21.name=Tonk
+target21.showInterface=false
+target21.type=ClassTarget
+target21.width=80
+target21.x=0
+target21.y=0
 target3.height=50
-target3.name=TonkWorld
+target3.name=Explosion
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=80
 target3.x=0
 target3.y=0
 target4.height=50
-target4.name=ogog
+target4.name=TonkWorld
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=80
@@ -187,35 +425,48 @@ target5.width=80
 target5.x=0
 target5.y=0
 target6.height=50
-target6.name=Barrel
+target6.name=CounterPlus
 target6.showInterface=false
 target6.type=ClassTarget
-target6.width=80
+target6.width=100
 target6.x=0
 target6.y=0
-target7.height=50
-target7.name=threePlayers
-target7.showInterface=false
-target7.type=ClassTarget
-target7.width=90
+target7.height=62
+target7.name=Tonks
+target7.type=PackageTarget
+target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
-target8.name=DmgWorld
+target8.name=SelectNumberOfPlayers
 target8.showInterface=false
 target8.type=ClassTarget
-target8.width=80
+target8.width=170
 target8.x=0
 target8.y=0
 target9.height=50
-target9.name=Physics
+target9.name=Barrel
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
+width=1936
+world.lastInstantiated=TonkWorld
+xPosition=-8
+yPosition=-8
+=======
+<<<<<<< HEAD
+width=1394
+world.lastInstantiated=StartScreen
+xPosition=23
+yPosition=29
+=======
 width=1294
 world.lastInstantiated=TonkWorld
 xPosition=-7
 yPosition=-7
+>>>>>>> b0e5e65450c4d7caacf22b8711170853e547c3de
+>>>>>>> be48e7d8dbddc1f4dac25df0863657e957ba8d28
