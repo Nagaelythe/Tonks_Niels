@@ -6,17 +6,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends World
+public class MyWorld extends greenfoot.World
 {
 
-    public static Start start = new Start();
-    public static twoPlayers two= new twoPlayers();
-    public static threePlayers three = new threePlayers();
-    public static ogog og = new ogog();
-    
+    /**
+     * Constructor for objects of class MyWorld.
+     * 
+     */
     public MyWorld()
     {    
-        super(600, 400, 1);
-        addObject(start,320,310);
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(600, 400, 1); 
     }
 }
