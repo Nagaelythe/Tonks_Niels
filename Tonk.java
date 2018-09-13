@@ -8,7 +8,7 @@
          */
  public class Tonk extends Actor
  {
-            int aimDegree, hp, fuel,player,Power;
+            int aimDegree, hp, fuel, player,Power;
             String name;
             boolean noBarrel = true;
             int tonkHeight = 5;
@@ -23,6 +23,7 @@
         hp = 1;
         Power = 20;
         Player = player;
+        fuel = 100;
         
     }
     public void act() 
@@ -47,19 +48,21 @@
     
     public void input(){
 
-        if(Greenfoot.isKeyDown("left")) {
+        if(Greenfoot.isKeyDown("left") && fuel > 0 && getX() > 0) {
             setLocation( getX()-1, TonkWorld.WORLD(getX()-1)-worldAlign);
-        } if(Greenfoot.isKeyDown("right")) {
+            fuel--;
+        } if(Greenfoot.isKeyDown("right") && fuel > 0 && getX() < TonkWorld.LENGTH-1) {
             setLocation( getX()+1, TonkWorld.WORLD(getX()+1)-worldAlign);
+            fuel--;
         } if(Greenfoot.isKeyDown("down")){
             aimDegree--;
         } if(Greenfoot.isKeyDown("up")){
-            aimDegree++;            //B.aim(aimDegree);            
+            aimDegree++;                  
         } 
-      //  if(Greenfoot.isKeyDown("space")){
           if(Greenfoot.getKey()=="space"){
             fire();
             TonkWorld.turn = (TonkWorld.turn+1)%2;
+            fuel = 100;
         }
         X = getX();
         Dedded = isDedded();
