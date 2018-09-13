@@ -17,17 +17,18 @@ public class DmgWorld extends World
     public DmgWorld(Tonk tonk1,Tonk tonk2, int[] mesh)
     {    
         super(1200, 560, 1); 
-        background.setColor(Color.LIGHT_GRAY);
-        background.fill();
         drawWorld(mesh);
         world = mesh;
         loadTonks(tonk1,tonk2);
     }
     public void drawWorld(int[] mesh){
         for(int i =0; i < mesh.length-1;i++){
-            background.setColorAt(i, mesh[i], Color.BLACK); 
+            for(int j = 559; j>= mesh[i];j--){
+                background.setColorAt(i, j, Color.GREEN.darker());
+            }
         }
     }
+    
     
     private void loadTonks(Tonk tonk1,Tonk tonk2){
 

@@ -54,14 +54,16 @@
         } if(Greenfoot.isKeyDown("down")){
             aimDegree--;
         } if(Greenfoot.isKeyDown("up")){
-            aimDegree++;            
+            aimDegree++;            //B.aim(aimDegree);            
         } 
+      //  if(Greenfoot.isKeyDown("space")){
           if(Greenfoot.getKey()=="space"){
             fire();
             TonkWorld.turn = (TonkWorld.turn+1)%2;
         }
         X = getX();
         Dedded = isDedded();
+
     }
     
     private void fire(){

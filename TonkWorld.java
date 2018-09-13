@@ -21,9 +21,6 @@ public class TonkWorld extends World
     public TonkWorld(int x)
     {    
         super(1200, 560, 1); 
-        
-        background.setColor(Color.LIGHT_GRAY);
-        background.fill();
 
         int[] mesh = createMesh(LENGTH);
         createWorld(mesh);
@@ -35,14 +32,7 @@ public class TonkWorld extends World
         addObject(Tonk1, 100, WORLD(100)-Tonk.worldAlign);
         addObject(Tonk2, 800, WORLD(800)-Tonk.worldAlign);
     }
-    public  void reDraw(){
-        GreenfootImage bob = getBackground();
-        bob.setColor(Color.LIGHT_GRAY);
-        bob.fill();
-        for(int i =0; i < world.length-1;i++){
-            bob.setColorAt(i, world[i], Color.BLACK); 
-        }
-    }
+
     
     public static int WORLD(int x){
         return world[x];
@@ -81,11 +71,15 @@ public class TonkWorld extends World
             
             
         }
+        
+        
     }
     
     public void drawWorld(int[] mesh){
         for(int i =0; i < mesh.length-1;i++){
-            background.setColorAt(i, mesh[i], Color.BLACK); 
+            for(int j = 559; j>= mesh[i];j--){
+                background.setColorAt(i, j, Color.GREEN.darker());
+            }
         }
     }
     
