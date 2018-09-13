@@ -40,6 +40,7 @@ public class TonkWorld extends World
         Tonk[] Tonks = {Tonk1,Tonk2};
         addObject(Tonk1, 100, WORLD(100)-Tonk.worldAlign);
         addObject(Tonk2, 800, WORLD(800)-Tonk.worldAlign);
+<<<<<<< HEAD
         
 
 =======
@@ -75,6 +76,8 @@ public class TonkWorld extends World
                 break;
             }
 >>>>>>> e5ea0b8c1979eaee1ee52bc00cb4a5ec19c901db
+=======
+>>>>>>> parent of 501cf20... temp UI
     }
 
     

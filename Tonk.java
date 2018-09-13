@@ -8,9 +8,8 @@
          */
  public class Tonk extends Actor
  {
-            int aimDegree, player,Power;
+            int aimDegree, hp, fuel, player,Power;
             String name;
-            protected static int fuel, hp;
             boolean noBarrel = true;
             int tonkHeight = 5;
             int barrelLength = 32;
@@ -24,13 +23,12 @@
             // class constructor int p,String nam
         public Tonk(int player){
         aimDegree = -45;
-        hp = 100;
+        hp = 1;
         Power = 20;
         Player = player;
         fuel = 100;
         
     }
-        
     public void act() 
     {   
         updPos();
@@ -47,11 +45,16 @@
         
         if(TonkWorld.turn == Player){
 <<<<<<< HEAD
+<<<<<<< HEAD
             getWorld().addObject(new UI(), 0,-50);
 =======
             setImage(greenTonk);
 >>>>>>> e5ea0b8c1979eaee1ee52bc00cb4a5ec19c901db
             input();
+=======
+
+        input();
+>>>>>>> parent of 501cf20... temp UI
   
         }
         if(Dedded){
@@ -59,11 +62,15 @@
         }
 <<<<<<< HEAD
             
+<<<<<<< HEAD
      }
 =======
         course =new Vector(0,0);    
  }
 >>>>>>> e5ea0b8c1979eaee1ee52bc00cb4a5ec19c901db
+=======
+ }
+>>>>>>> parent of 501cf20... temp UI
     
     public void input(){
 
@@ -86,6 +93,7 @@
         }
 
         Dedded = isDedded();
+
     }
     private void updPos(){
         posY = getY();
@@ -97,14 +105,13 @@
         getWorld().addObject(p, getX() + (int) Bar.getX(), getY() - tonkHeight + (int) Bar.getY());    
         
     }
-    
     public void hpLoss(int av){
         hp-=av;
     }
-    
     private boolean isDedded(){
         return hp <= 0;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 
@@ -125,3 +132,7 @@
 }
 }
 >>>>>>> e5ea0b8c1979eaee1ee52bc00cb4a5ec19c901db
+=======
+
+}
+>>>>>>> parent of 501cf20... temp UI
