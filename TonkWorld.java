@@ -26,6 +26,7 @@ public class TonkWorld extends World
         createWorld(mesh);
         drawWorld(mesh);
         world = mesh;
+        createTree(15);
         Tonk1 = new Tonk(0);
         Tonk2 = new Tonk(1);        
         Tonk[] Tonks = {Tonk1,Tonk2};
@@ -83,9 +84,14 @@ public class TonkWorld extends World
         }
     }
     
-    
-
-}
+    public void createTree(int n){
+        Random r = new Random();
+        for(int i = 0; i < n; i++){
+        int rx = r.nextInt(LENGTH);
+        addObject(new Tree(), rx, WORLD(rx)-20);
+    }
+    }
+    }
 
 
 
